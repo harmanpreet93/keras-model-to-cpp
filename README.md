@@ -13,11 +13,11 @@ It is working with the Tensorflow backend.
 
 #Example
 
- 1. Run `save_mode.py` script. It will produce files with architecture `arch.json` and weights in HDF5 format `weights.h5`.
+ 1. Run `save_model.py` script. It will produce files with architecture `arch.json` and weights in HDF5 format `weights.h5`.
  2. Dump network to dat file `python dump_to_cpp.py -a arch.json -w weights.h5 -o dumped_nn.dat`.
- 3. Run `test_keas.py -a arch.json -w weights.h5 -o input.dat`. It will output the predict and actual class based on data in `input.dat` file.
+ 3. Run `test_keras.py -a arch.json -w weights.h5 -o input.dat`. It will output the predict and actual class based on data in `input.dat` file.
  4. Compile example `g++ test_main.cpp predict.cpp` - see code in `test_main.cpp`.
- 5. Run binary `./a.out` - you shoul get the same output as in step one from Keras.
+ 5. Run binary `./a.out dumped_nn.dat input.dat` - you should get the same output as in step one from Keras.
 
 #Testing
 
