@@ -5,7 +5,7 @@ echo 'Test for NN dumping'
 # Parameters
 INPUT_ARCH="arch.json"
 INPUT_WEIGHTS="weights.h5"
-DUMPED_NN="dumped_nn.dump"
+DUMPED_NN="dumped_nn.dat"
 TEST_INPUT="input.dat"
 TEST_BIN="test_bin"
 
