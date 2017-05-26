@@ -5,13 +5,13 @@ Also the code works for binary classification only as it was my only requirement
 
 It is working with the Tensorflow backend.
 
-#Usage
+# Usage
 
  1. Save your network weights and architecture using `save_model.py` script.
  2. Dump network structure to plain text file with `dump_to_cpp.py` script.
  3. Use network with code from `predict.h` and `predict.cc` files - see `test_run.sh`.
 
-#Example
+# Example
 
  1. Run `save_model.py` script. It will produce files with architecture `arch.json` and weights in HDF5 format `weights.h5`.
  2. Dump network to dat file `python dump_to_cpp.py -a arch.json -w weights.h5 -o dumped_nn.dat`.
@@ -19,7 +19,7 @@ It is working with the Tensorflow backend.
  4. Compile example `g++ test_main.cpp predict.cpp` - see code in `test_main.cpp`.
  5. Run binary `./a.out dumped_nn.dat input.dat` - you should get the same output as in step one from Keras.
 
-#Testing
+# Testing
 
 If you want to test dumping for your network, please use `test_run.sh` script. Please provide there your network architecture and weights. The script do following job:
 
