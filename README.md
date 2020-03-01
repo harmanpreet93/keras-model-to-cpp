@@ -1,4 +1,4 @@
-# keras model to C++
+# Keras model to C++
 
 This code is to port Keras neural network model to C++. Neural networks architecture is saved in a JSON file and weights are stored in HDF5 format. The saved model is then loaded and dumped to .dat file, which will be used in cpp file. As of now the it supports Dense and Activation layers only. Also you have to add activation as a new layer instead of passing it as a parameter to Dense layer. Major activation functions like `relu, softmax, sigmoid, linear, softplus, softsign, etc` has been implemented. You can add implementation to any other activation function or any other layer as you wish in future.
 Also the code works for binary classification only as it was my only requirement at that time. But it can be easily extended for multiclass classification.  
@@ -21,7 +21,7 @@ It is working with the Tensorflow backend.
 
 # Testing
 
-If you want to test dumping for your network, please use `test_run.sh` script. Please provide there your network architecture and weights. The script do following job:
+If you want to test dumping for your network, please use `test_run.sh` script. Please provide there your network architecture and weights. The script do the following job:
 
  1. Dump network into text file.
  2. Generate random sample and save in inout.dat. First line contains number of features in input, next line contains features and last line contains actual class.
